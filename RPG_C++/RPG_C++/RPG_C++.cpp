@@ -7,6 +7,5 @@ int main()
 	hero nickname;
 	string result = nickname.AskName();
 
-
 	return 0;
 }

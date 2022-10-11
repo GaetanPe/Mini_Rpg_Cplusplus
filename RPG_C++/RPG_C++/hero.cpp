@@ -1,5 +1,6 @@
 #include <iostream>
 #include "hero.h"
+#include<cstdlib>
 using namespace std;
 
 string hero::AskName() {
@@ -7,7 +8,7 @@ string hero::AskName() {
 	cout << "Bienvenue, veuillez entrer votre pseudo -> ";
 	cin >> name;
 	m_name = name;
-	cout << "Votre nom est " << m_name << ".";
+	system("cls");
 	
 	return name;
 }
