@@ -1,7 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
+#include "hero.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!"<<endl;
+	hero player;
+	string result = player.AskName();
+
+	return 0;
 }
