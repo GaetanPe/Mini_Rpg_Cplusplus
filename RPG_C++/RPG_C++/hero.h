@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+#include "Entity.h"
 using namespace std;
 
-class hero
+class hero : Entity
 {
 public:
 	string AskName();

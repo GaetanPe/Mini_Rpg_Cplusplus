@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-	hero nickname;
-	string result = nickname.AskName();
+	hero player;
+	string result = player.AskName();
 
 	return 0;
 }
