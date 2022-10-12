@@ -1,14 +1,13 @@
-#include <iostream>
 #include "Hero.h"
-#include<cstdlib>
-using namespace std;
+#include "Clear.h"
+
 
 string hero::AskName() {
 	char name[100];
 	cout << "Bienvenue, veuillez entrer votre pseudo -> ";
 	cin >> name;
 	m_name = name;
-	system("cls");
-	
+	Clear clear;
+	clear.clearConsole();
 	return name;
 }

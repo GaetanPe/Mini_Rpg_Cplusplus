@@ -127,12 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Armes.cpp" />
+    <ClCompile Include="Clear.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="RPG_C++.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Armes.h" />
+    <ClInclude Include="Clear.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Framework.h" />
     <ClInclude Include="Hero.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

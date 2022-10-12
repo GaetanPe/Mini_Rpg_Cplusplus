@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "Framework.h"
 
 class Entity
 {

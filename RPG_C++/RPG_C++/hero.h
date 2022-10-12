@@ -1,7 +1,5 @@
-#pragma once
-#include <iostream>
+#include "Framework.h"
 #include "Entity.h"
-using namespace std;
 
 class hero : Entity
 {
