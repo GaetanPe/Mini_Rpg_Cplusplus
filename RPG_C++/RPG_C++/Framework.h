@@ -19,3 +19,4 @@ using namespace std;
 #include "Game.h"
 #include "Hero.h"
 #include "Monstre.h"
+#include "Room.h"

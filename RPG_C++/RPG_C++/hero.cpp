@@ -32,6 +32,7 @@ int hero::Hurt(int pv)
 		m_pv = 0;
 
 	}
+
 	return m_pv;
 
 }

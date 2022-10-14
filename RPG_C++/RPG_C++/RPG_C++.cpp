@@ -2,14 +2,15 @@
 
 int main()
 {
-	
+	Room* room = new Room;
+	room->printGrid();
 	hero player;
 	string name = player.AskName();
-	system("pause");
+	system("pause>nul");
 	game nb;
 	int msg = nb.Salle();
 
-	system("pause");
+	system("pause>nul");
 	system("cls");
 	return 0;
 }
