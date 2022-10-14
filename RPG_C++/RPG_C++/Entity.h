@@ -2,6 +2,7 @@
 
 class Entity
 {
+
 public:
 	string m_name = "";
 	int m_pv;
