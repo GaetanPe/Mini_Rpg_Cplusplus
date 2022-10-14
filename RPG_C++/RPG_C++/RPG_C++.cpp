@@ -1,11 +1,15 @@
-﻿#include <iostream>
-#include "hero.h"
-using namespace std;
+﻿#include "Framework.h"
 
 int main()
 {
+	
 	hero player;
-	string result = player.AskName();
+	string name = player.AskName();
+	system("pause");
+	game nb;
+	int msg = nb.Salle();
 
+	system("pause");
+	system("cls");
 	return 0;
 }

@@ -1,2 +1,1 @@
-#include "Entity.h"
-#include <iostream>
+#include "Framework.h"
