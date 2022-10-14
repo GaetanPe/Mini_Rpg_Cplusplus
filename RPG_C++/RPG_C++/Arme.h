@@ -1,16 +1,10 @@
 
 
-class Arme
+class Arme: public Item
 {
 public:
 	Arme();
-	string getM_name();
-	int getM_attack();
-
-public:
-	string m_name;
-	int m_attack;
-		
+	
 
 };
 

@@ -16,7 +16,9 @@ using namespace std;
 
 
 #include "Entity.h"
+#include "Item.h"
 #include "Game.h"
 #include "Hero.h"
 #include "Monstre.h"
 #include "Arme.h"
+#include "Armor.h"

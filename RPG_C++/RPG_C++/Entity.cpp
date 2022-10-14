@@ -1,16 +1,30 @@
 #include "Framework.h"
-#include <vector>
 
-/*
-void Entity::createWeapon()
+string Entity ::get_name()
 {
-	vector<Arme*> vector_Arme;
-
-	//Arme* A1 = new Arme();
-	Arme* pArme = new Arme;
-	pArme->Init("Crystalis", 5);
-	vector_Arme.push_back(pArme);
-	
+	return m_name;
 
 }
-*/
+
+int Entity::Hurt(int pv)
+{
+
+	m_pv -= pv;
+	if (m_pv <= 0)
+	{
+		m_pv = 0;
+
+	}
+	return m_pv;
+
+}
+int Entity::get_Pv()
+{
+	return m_pv;
+}
+
+int Entity::get_Atk()
+{
+	/*Prendre la valeur de l'arme actuellement porté*/
+	return m_atk;
+}

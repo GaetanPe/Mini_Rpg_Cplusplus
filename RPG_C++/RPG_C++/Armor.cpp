@@ -1,9 +1,5 @@
 #include "Framework.h"
 
-
-Arme::Arme()
-{
+Armor::Armor() {
 
 }
- 
-
