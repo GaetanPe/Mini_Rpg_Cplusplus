@@ -23,7 +23,7 @@ int game::Salle() {
 			cout << "Let's go fight\n";
 			system("pause>nul");
 			
-			while(m_pMonstre->getM_Pv() != 0 || m_pHero->get_Pv() != 0){
+			while(m_pMonstre->getM_Pv() != 0 && m_pHero->get_Pv() != 0){
 			vitesseAtq =  rand() %2;
 			if (vitesseAtq == 0) {
 				m_pMonstre->Hurt(m_pHero->get_Atk());

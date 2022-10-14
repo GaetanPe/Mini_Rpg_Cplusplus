@@ -1,5 +1,5 @@
 #pragma once
-class Monstre
+class Monstre : public Entity
 {
 public:
 	Monstre();
@@ -11,6 +11,6 @@ public:
 	int Hurt(int pv);
 public:
 	int m_atk = 1;
-	int m_pv = 10;
+	//int m_pv = 10;
 	string m_name = "Homonculus";
 };
