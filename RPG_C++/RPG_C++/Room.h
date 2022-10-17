@@ -16,3 +16,4 @@ public:
 	Arme* m_sword;
 	Armor* m_armor;
 };
+

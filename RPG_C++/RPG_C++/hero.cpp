@@ -9,7 +9,3 @@ string hero::AskName() {
 	cout << m_name << " vous allez rentrer dans la salle a votre droite.\n";
 	return name;
 }
-
-
-
-

@@ -24,4 +24,5 @@ using namespace std;
 #include "Monstre.h"
 #include "Arme.h"
 #include "Armor.h"
+#include "Monstre.h"
 #include "Room.h"
