@@ -12,19 +12,6 @@ string hero::AskName() {
 
 
 
-int hero :: get_Pv()
-{
-	return m_pv;
-}
-
-int hero:: get_Atk()
-{
-	/*Prendre la valeur de l'arme actuellement porté*/
-	return m_atk;
-}
-
-int hero::Hurt(int pv)
-{
 
 	m_pv -= pv;
 	if (m_pv <= 0)

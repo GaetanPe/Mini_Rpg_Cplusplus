@@ -1,7 +1,7 @@
 #pragma once
 
 
-class hero 
+class hero : public Entity
 {
 public:
 	string AskName();
