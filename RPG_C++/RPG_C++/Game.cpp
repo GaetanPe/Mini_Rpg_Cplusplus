@@ -69,6 +69,20 @@ int game::Salle() {
 					cout << "Vous avez louper votre attaque.\n";
 				}
 				system("pause>nul");
+=======
+			
+			while(m_pMonstre->getM_Pv() != 0 && m_pHero->get_Pv() != 0){
+			vitesseAtq =  rand() %2;
+			if (vitesseAtq == 0) {
+				m_pMonstre->Hurt(m_pHero->get_Atk());
+				cout << "Vous lui infligez des degats. \n";
+				cout << "Il reste " << m_pMonstre->getM_Pv() << " PV a " << m_pMonstre->getM_Name() << "\n";
+			}
+			else {
+				cout << "Vous avez louper votre attaque.\n";
+			}
+			system("pause>nul");
+>>>>>>> ba5e07f4561b030efd7a51a1d5bd48ef171173af
 
 				vitesseMAtq = rand() % 3;
 				if (vitesseMAtq == 0)
