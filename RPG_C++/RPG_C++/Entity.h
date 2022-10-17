@@ -10,7 +10,6 @@ public:
 
 
 public:
-
 	string m_name;
 	int m_pv;
 	int m_atk;

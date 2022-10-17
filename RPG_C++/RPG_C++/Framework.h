@@ -11,9 +11,11 @@ using namespace std;
 #include <map>
 #include<cstdlib>
 #include <stdio.h>
+#include <list>
 
 
 
+#include "Global.h"
 
 #include "Entity.h"
 #include "Item.h"
@@ -22,3 +24,4 @@ using namespace std;
 #include "Monstre.h"
 #include "Arme.h"
 #include "Armor.h"
+#include "Room.h"
