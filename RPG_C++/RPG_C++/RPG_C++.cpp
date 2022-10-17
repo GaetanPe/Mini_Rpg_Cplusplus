@@ -1,6 +1,7 @@
 ﻿#include "Framework.h"
 
 extern game* g_pGame;
+extern game* g_monstreGame;
 
 int main()
 {
@@ -20,13 +21,13 @@ int main()
 	srand((int)time(NULL));
 
 	game game;
-	g_pGame = &game;
-	GetGame()->InitApp();
-	GetGame()->Init();
+//	g_pGame = &game;
+//	GetGame()->InitApp();
+//	GetGame()->Init();
 
-	//while (true)
-	//{
-	//	cout << game.GetNextName() << endl;
-	//	Sleep(1000);
-	//}
+	g_monstreGame = &game;
+	monstreGame()->tabMonstre();
+	monstreGame()->initMonstre();
+
+
 }

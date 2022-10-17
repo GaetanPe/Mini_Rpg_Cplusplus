@@ -42,7 +42,7 @@ void Room::createMonster()
 
     m_monstre = new Monstre;
 
-    m_monstre->m_name = "Toto";
+    m_monstre->m_name = monstreGame()->newMonstre();
     m_monstre->m_pv = 5 + rand()%5;
     m_monstre->m_atk = 1 + rand()%5;  
 }

@@ -1,5 +1,68 @@
 #include "Framework.h"
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// MONSTRES : 
+void game::tabMonstre()
+{
+	nameMonster[0] = "monstre 1";
+	nameMonster[1] = "monstre 2";
+	nameMonster[2] = "monstre 3";
+	nameMonster[3] = "monstre 4";
+	nameMonster[4] = "monstre 5";
+	nameMonster[5] = "monstre 6";
+	nameMonster[6] = "monstre 7";
+	nameMonster[7] = "monstre 8";
+	nameMonster[8] = "monstre 9";
+	nameMonster[9] = "monstre 10";
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << nameMonster[i] << endl;
+	}
+}
+
+
+void game::initMonstre()
+{
+	vector<int>indexes_monstre;
+	for (int i = 0; i < 10; i++)
+	{
+		indexes_monstre.push_back(i);
+		cout << "indexes_monstre : " << indexes_monstre[i] << endl;
+	}
+	monsterRestants.clear();
+
+	for (int i = 0; i < 10; i++)
+	{
+		int indexM = rand() % indexes_monstre.size();
+
+		int val = indexes_monstre[indexM];
+
+		monsterRestants.push_back(monsterRestants[val]);
+		indexes_monstre.erase(indexes_monstre.begin() + indexM);
+		cout << "monstres restants : " << monsterRestants[i] << endl;
+
+	}
+}
+
+
+string game::newMonstre()
+{
+	if (monsterRestants.size() == 0)
+	{
+		return "";
+	}
+		
+	string nomMonstre = monsterRestants[monsterRestants.size() - 1];
+	monsterRestants.pop_back();
+	return nomMonstre;
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ARME :
+
 void game::InitApp()
 {
 	nomArmes[0] = "Joyeuse";
@@ -21,9 +84,6 @@ void game::InitApp()
 
 void game::Init()
 {
-	//nomRestants.clear();
-	//for (int i = 0; i < 10; i++)
-	//	nomRestants.push_back(nomArmes[i]);
 
 	vector<int> indexes;
 	for (int i = 0; i < 10; i++)
@@ -32,19 +92,17 @@ void game::Init()
 		cout << "index : " << indexes[i] << endl;
 	}
 		
-	nomRestants.clear();
+	armeRestants.clear();
 
 	for (int i = 0; i < 10; i++)
 	{
 		int index = rand() % indexes.size();
-		//cout << " Index : " << index << endl;
 
 		int val = indexes[index];
-		//cout << "val : " << val << endl;
 
-		nomRestants.push_back(nomArmes[val]);
+		armeRestants.push_back(nomArmes[val]);
 		indexes.erase(indexes.begin() + index);
-		cout << "nom restants : " << nomRestants[i] << endl;
+		cout << "nom restants : " << armeRestants[i] << endl;
 
 	}
 
@@ -52,16 +110,16 @@ void game::Init()
 
 string game::GetNextName()
 {
-	if (nomRestants.size() == 0)
+	if (armeRestants.size() == 0)
 		return "";
-	string nom = nomRestants[nomRestants.size() - 1];
-	nomRestants.pop_back();
+	string nom = armeRestants[armeRestants.size() - 1];
+	armeRestants.pop_back();
 	return nom;
 }
 
 
-
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// SALLE :
 
 int game::Salle() {
 	int nombreSalle = 0;
@@ -74,7 +132,7 @@ int game::Salle() {
 	hero* m_pHero = new hero();
 	Monstre* m_pMonstre = new Monstre();
 	if (nombreSalle == 0)
-	{	
+	{
 		if (m_pMonstre->get_Pv() == 0)
 		{
 			cout << "Le monstre a déjà était battu\n";
@@ -199,22 +257,23 @@ int game::Salle() {
 				break;
 				}
 			}
-		if (nombreSalle == 1) {
-			cout << "Il y'a un tresor la\n";
+			if (nombreSalle == 1) {
+				cout << "Il y'a un tresor la\n";
 
+			}
+			else if (nombreSalle == 2) {
+				cout << "Il y'a une arme par terre\n";
+
+			}
+			else if (nombreSalle == 3) {
+				cout << "Il y'a une armures par terre\n";
+
+			}
+
+
+			return vitesseMAtq;
+			return vitesseAtq;
+			return nombreSalle;
 		}
-		else if (nombreSalle == 2) {
-			cout << "Il y'a une arme par terre\n";
-
-		}
-		else if (nombreSalle == 3) {
-			cout << "Il y'a une armures par terre\n";
-
-		}
-
-
-		return vitesseMAtq;
-		return vitesseAtq;
-		return nombreSalle;
 	}
 }
