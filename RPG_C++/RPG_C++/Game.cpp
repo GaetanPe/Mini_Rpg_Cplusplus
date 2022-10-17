@@ -74,7 +74,7 @@ int game::Salle() {
 	hero* m_pHero = new hero();
 	Monstre* m_pMonstre = new Monstre();
 	if (nombreSalle == 0)
-	{	
+	{
 		if (m_pMonstre->get_Pv() == 0)
 		{
 			cout << "Le monstre a déjà était battu\n";
@@ -199,22 +199,23 @@ int game::Salle() {
 				break;
 				}
 			}
-		if (nombreSalle == 1) {
-			cout << "Il y'a un tresor la\n";
+			if (nombreSalle == 1) {
+				cout << "Il y'a un tresor la\n";
 
+			}
+			else if (nombreSalle == 2) {
+				cout << "Il y'a une arme par terre\n";
+
+			}
+			else if (nombreSalle == 3) {
+				cout << "Il y'a une armures par terre\n";
+
+			}
+
+
+			return vitesseMAtq;
+			return vitesseAtq;
+			return nombreSalle;
 		}
-		else if (nombreSalle == 2) {
-			cout << "Il y'a une arme par terre\n";
-
-		}
-		else if (nombreSalle == 3) {
-			cout << "Il y'a une armures par terre\n";
-
-		}
-
-
-		return vitesseMAtq;
-		return vitesseAtq;
-		return nombreSalle;
 	}
 }
