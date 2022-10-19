@@ -9,17 +9,3 @@ string hero::AskName() {
 	cout << m_name << " vous allez rentrer dans la salle a votre droite.\n";
 	return name;
 }
-
-
-
-
-	m_pv -= pv;
-	if (m_pv <= 0)
-	{
-		m_pv = 0;
-
-	}
-
-	return m_pv;
-
-}*/

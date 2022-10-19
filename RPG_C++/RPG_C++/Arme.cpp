@@ -6,4 +6,9 @@ Arme::Arme()
 
 }
  
+void Arme::armes()
+{
+
+}
+
 
