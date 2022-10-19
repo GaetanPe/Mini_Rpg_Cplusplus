@@ -5,6 +5,7 @@ class hero : public Entity
 {
 public:
 	string AskName();
+
 public:
 	string m_name = "";
 	int m_pv = 20;
