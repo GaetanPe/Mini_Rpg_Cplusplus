@@ -8,12 +8,15 @@ public:
 
 	void InitApp();
 	void Init();
-	
-	void tabMonstre();
+
 	void initMonstre();
+
+	void initArmor();
 
 	string GetNextName();
 	string newMonstre();
+	string newArmor();
+
 
 public:
 	string nomArmes[10];
@@ -21,6 +24,11 @@ public:
 
 	string nameMonster[10];
 	vector<string> monsterRestants;
+
+	string nameArmor[10];
+	vector<string> armorRestants;
+	string typeArmor[3];
+	vector<string> typeRestants;
 
 };
 

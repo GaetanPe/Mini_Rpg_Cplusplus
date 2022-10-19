@@ -3,4 +3,3 @@
 class game;
 
 game* GetGame();
-game* monstreGame();

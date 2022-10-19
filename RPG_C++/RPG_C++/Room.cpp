@@ -16,7 +16,9 @@ Room::~Room()
 }
 
 void Room::printGrid() {
-    Player* m_pPlayer = new Player(29, 14);
+    Player* m_pPlayer = new Player;
+	m_pPlayer->AddX(29);
+	m_pPlayer->AddY(14);
 	Monstre* m_pMonstre = new Monstre(9, 14);
 	Room* pMap = new Room;
 	int mapCounter = 0;
@@ -248,7 +250,7 @@ void Room::createMonster()
 
     m_monstre = new Monstre(0, 0);
 
-    m_monstre->m_name = monstreGame()->newMonstre();
+    m_monstre->m_name = GetGame()->newMonstre();
     m_monstre->m_pv = 5 + rand()%5;
     m_monstre->m_atk = 1 + rand()%5;  
 }
@@ -270,6 +272,8 @@ void Room::createArmor()
         return;
     m_armor = new Armor;
 
-    m_armor->m_name = "Armure";
+    m_armor->m_name = GetGame()->newArmor();
+    m_armor->m_type = " ";
     m_armor->m_defense = 1 + rand() %3;
+
 }

@@ -1,9 +1,18 @@
 #include "Framework.h"
 
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// MONSTRES : 
-void game::tabMonstre()
+void game::InitApp()
 {
+	nomArmes[0] = "Joyeuse";
+	nomArmes[1] = "Excalibur";
+	nomArmes[2] = "Epee en fer";
+	nomArmes[3] = "katana";
+	nomArmes[4] = "Master Sword";
+	nomArmes[5] = "Nadur";
+	nomArmes[6] = "Keyblade";
+	nomArmes[7] = "Buster Sword";
+	nomArmes[8] = "Frostmourne";
+	nomArmes[9] = "Soul Edge";
+
 	nameMonster[0] = "monstre 1";
 	nameMonster[1] = "monstre 2";
 	nameMonster[2] = "monstre 3";
@@ -15,11 +24,85 @@ void game::tabMonstre()
 	nameMonster[8] = "monstre 9";
 	nameMonster[9] = "monstre 10";
 
+	nameArmor[0] = "Armor 1";
+	nameArmor[1] = "Armor 2";
+	nameArmor[2] = "Armor 3";
+	nameArmor[3] = "Armor 4";
+	nameArmor[4] = "Armor 5";
+	nameArmor[5] = "Armor 6";
+	nameArmor[6] = "Armor 7";
+	nameArmor[7] = "Armor 8";
+	nameArmor[8] = "Armor 9";
+	nameArmor[9] = "Armor 10";
+
+	typeArmor[0] = "casque";
+	typeArmor[1] = "plastron";
+	typeArmor[2] = "bottes";
+
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ARMOR :
+
+void game::initArmor()
+{
+	vector<int>indexes_armor;
 	for (int i = 0; i < 10; i++)
 	{
-		cout << nameMonster[i] << endl;
+		indexes_armor.push_back(i);
+		cout << "indexes_armor : " << indexes_armor[i] << endl;
 	}
+
+	vector<int>indexes_type;
+	for (int i = 0; i < 3; i++)
+	{
+		indexes_type.push_back(i);
+		cout << "indexes_type : " << indexes_type[i] << endl;
+	}
+	armorRestants.clear();
+
+	for (int i = 0; i < 10; i++)
+	{
+		int indexA = rand() % indexes_armor.size();
+
+		int val = indexes_armor[indexA];
+
+		armorRestants.push_back(nameArmor[val]);
+		indexes_armor.erase(indexes_armor.begin() + indexA);
+		cout << "armor Restantss : " << armorRestants[i] << endl;
+
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		int indexType = rand() % indexes_type.size();
+
+		int val = indexes_type[indexType];
+
+		typeRestants.push_back(typeArmor[val]);
+		cout << "type Restants : " << typeRestants[i] << endl;
+
+	}
+
 }
+
+string game::newArmor()
+{
+	if (armorRestants.size() == 0 && typeArmor->size() == 0)
+	{
+		return "";
+	}
+
+	string nomArmor = armorRestants[armorRestants.size() - 1];
+	monsterRestants.pop_back();
+	return nomArmor;
+	cout << "cc" << endl;
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// MONSTRES : 
 
 
 void game::initMonstre()
@@ -60,27 +143,11 @@ string game::newMonstre()
 
 
 
+
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ARME :
 
-void game::InitApp()
-{
-	nomArmes[0] = "Joyeuse";
-	nomArmes[1] = "Excalibur";
-	nomArmes[2] = "Epee en fer";
-	nomArmes[3] = "katana";
-	nomArmes[4] = "Master Sword";
-	nomArmes[5] = "Nadur";
-	nomArmes[6] = "Keyblade";
-	nomArmes[7] = "Buster Sword";
-	nomArmes[8] = "Frostmourne";
-	nomArmes[9] = "Soul Edge";
 
-	for (int i=0; i < 10; i++)
-	{
-		cout << nomArmes[i] << endl;
-	}
-}
 
 void game::Init()
 {

@@ -1,8 +1,6 @@
 ﻿#include "Framework.h"
 
 extern game* g_pGame;
-extern game* g_monstreGame;
-
 int main()
 {
 	ShowWindow(GetConsoleWindow(), SW_SHOWMAXIMIZED);
@@ -23,12 +21,12 @@ int main()
 
 	game game;
 	g_pGame = &game;
-	GetGame()->InitApp();
-	GetGame()->Init();
 
-	g_monstreGame = &game;
-	monstreGame()->tabMonstre();
-	monstreGame()->initMonstre();
+	GetGame()->tabArmor();
+	GetGame()->initArmor();
+	GetGame()->newArmor();
 
+
+	
 
 }
