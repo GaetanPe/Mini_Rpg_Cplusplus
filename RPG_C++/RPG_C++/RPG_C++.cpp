@@ -21,9 +21,9 @@ int main()
 	srand((int)time(NULL));
 
 	game game;
-//	g_pGame = &game;
-//	GetGame()->InitApp();
-//	GetGame()->Init();
+	g_pGame = &game;
+	GetGame()->InitApp();
+	GetGame()->Init();
 
 	g_monstreGame = &game;
 	monstreGame()->tabMonstre();

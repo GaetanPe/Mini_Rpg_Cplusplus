@@ -38,7 +38,7 @@ void game::initMonstre()
 
 		int val = indexes_monstre[indexM];
 
-		monsterRestants.push_back(monsterRestants[val]);
+		monsterRestants.push_back(nameMonster[val]);
 		indexes_monstre.erase(indexes_monstre.begin() + indexM);
 		cout << "monstres restants : " << monsterRestants[i] << endl;
 
