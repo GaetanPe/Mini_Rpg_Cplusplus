@@ -1,5 +1,5 @@
 #include "Framework.h"
-
+/*
 int game::Salle() {
 	int nombreSalle = 0;
 	int vitesseAtq = 0;
@@ -69,7 +69,6 @@ int game::Salle() {
 					cout << "Vous avez louper votre attaque.\n";
 				}
 				system("pause>nul");
-=======
 			
 			while(m_pMonstre->getM_Pv() != 0 && m_pHero->get_Pv() != 0){
 			vitesseAtq =  rand() %2;
@@ -82,7 +81,6 @@ int game::Salle() {
 				cout << "Vous avez louper votre attaque.\n";
 			}
 			system("pause>nul");
->>>>>>> ba5e07f4561b030efd7a51a1d5bd48ef171173af
 
 				vitesseMAtq = rand() % 3;
 				if (vitesseMAtq == 0)
@@ -150,3 +148,11 @@ int game::Salle() {
 	return vitesseAtq;
 	return nombreSalle;
 }
+*/
+void game::moove()
+{
+	Room* pMap = new Room;
+	pMap->printGrid();
+
+
+};

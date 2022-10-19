@@ -1,4 +1,4 @@
-#include "Framework.h"
+/*#include "Framework.h"
 
 
 string hero::AskName() {
@@ -22,4 +22,4 @@ string hero::AskName() {
 
 	return m_pv;
 
-}
+}*/
