@@ -42,7 +42,7 @@ void Room::createMonster()
 
     m_monstre = new Monstre;
 
-    m_monstre->m_name = monstreGame()->newMonstre();
+    m_monstre->m_name = GetGame()->newMonstre();
     m_monstre->m_pv = 5 + rand()%5;
     m_monstre->m_atk = 1 + rand()%5;  
 }
@@ -64,7 +64,8 @@ void Room::createArmor()
         return;
     m_armor = new Armor;
 
-    m_armor->m_name = "Armure";
-    m_armor->m_Type = "casque";
+    m_armor->m_name = GetGame()->newArmor();
+    m_armor->m_Type = " ";
     m_armor->m_defense = 1 + rand() %3;
+
 }
