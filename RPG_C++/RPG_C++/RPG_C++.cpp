@@ -3,19 +3,18 @@
 extern game* g_pGame;
 int main()
 {
+	//string name = player.AskName();
+	/*game nb;
+	int msg = nb.Salle(); */
 	Room* room = new Room;
 	room->printGrid();
-	/*
 	hero player;
 	string name = player.AskName();
 	system("pause>nul");
 	game nb;
-	int msg = nb.Salle();
-
-	system("pause>nul");
+	nb.moove();
 	system("cls");
 	return 0;
-	*/
 	srand((int)time(NULL));
 
 	game game;

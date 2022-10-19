@@ -4,6 +4,7 @@ class game
 {
 public:
 	int Salle();
+	void moove();
 
 	void InitApp();
 	void Init();
