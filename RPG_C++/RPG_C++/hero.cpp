@@ -1,4 +1,4 @@
-/*#include "Framework.h"
+#include "Framework.h"
 
 
 string hero::AskName() {
