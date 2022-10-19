@@ -5,6 +5,11 @@ string Item::get_name()
 	return m_name;
 }
 
+string Item::get_type()
+{
+	return m_type;
+}
+
 int Item::get_attack()
 {
 	return m_attack;
