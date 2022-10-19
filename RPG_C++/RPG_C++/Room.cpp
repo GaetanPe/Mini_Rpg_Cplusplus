@@ -15,9 +15,6 @@ Room::~Room()
     delete m_monstre;
 }
 
-
-
-
 void Room::printGrid() {
     Player* m_pPlayer = new Player(29, 14);
 	Monstre* m_pMonstre = new Monstre(9, 14);
@@ -58,7 +55,6 @@ void Room::printGrid() {
 	bool running = true;
 	while (running)
 	{
-
 		int v;
 		cout << "Ou voulez-vous aller ?\n"
 			"1-haut\n"
@@ -69,17 +65,12 @@ void Room::printGrid() {
 		cin >> v;
 		if (v == 1)
 		{
-			m_pPlayer->AddY(-1);
+			m_pPlayer->AddY(-10);
 			system("cls");
-			if (m_pPlayer->GetY() == 9 && m_pPlayer->GetX() != 9 && m_pPlayer->GetX() != 29  && m_pPlayer->GetX() != 49 )
-			{
-				m_pPlayer->AddY(1);
+			if (m_pPlayer->GetY() <= 0)
+			{ 
+				m_pPlayer->AddY(10);
 			}
-			else if (m_pPlayer->GetY() == 19 && m_pPlayer->GetX() != 9 && m_pPlayer->GetX() != 29 && m_pPlayer->GetX() != 49)
-				m_pPlayer->AddY(1);
-			else if (m_pPlayer->GetY() == 0)
-				m_pPlayer->AddY(1);
-			
 			for (int y = 0; y < 30; y++) {
 
 				for (int x = 0; x < 60; x++) {
@@ -115,16 +106,12 @@ void Room::printGrid() {
 		}
 		if (v == 2)
 		{
-			m_pPlayer->AddX(-1);
+			m_pPlayer->AddX(-20);
 			system("cls");
-			if (m_pPlayer->GetX() == 19 && m_pPlayer->GetY() != 4 && m_pPlayer->GetY() != 14 && m_pPlayer->GetY() != 24)
+			if (m_pPlayer->GetX() <= 0)
 			{
-				m_pPlayer->AddX(1);
+				m_pPlayer->AddX(20);
 			}
-			else if (m_pPlayer->GetX() == 39 && m_pPlayer->GetY() != 4 && m_pPlayer->GetY() != 14 && m_pPlayer->GetY() != 24)
-				m_pPlayer->AddX(1);
-			else if (m_pPlayer->GetX() == 0)
-				m_pPlayer->AddX(1);
 
 			for (int y = 0; y < 30; y++) {
 
@@ -161,16 +148,12 @@ void Room::printGrid() {
 		}
 		if (v == 3)
 		{
-			m_pPlayer->AddX(1);
+			m_pPlayer->AddX(20);
 			system("cls");
-			if (m_pPlayer->GetX() == 39 && m_pPlayer->GetY() != 4 && m_pPlayer->GetY() != 14 && m_pPlayer->GetY() != 24)
+			if (m_pPlayer->GetX() >= 59)
 			{
-				m_pPlayer->AddX(-1);
+				m_pPlayer->AddX(-20);
 			}
-			else if (m_pPlayer->GetX() == 19 && m_pPlayer->GetY() != 4 && m_pPlayer->GetY() != 14 && m_pPlayer->GetY() != 24)
-				m_pPlayer->AddX(-1);
-			else if (m_pPlayer->GetX() == 59)
-				m_pPlayer->AddX(-1);
 
 			for (int y = 0; y < 30; y++) {
 
@@ -207,16 +190,12 @@ void Room::printGrid() {
 		}
 		if (v == 4)
 		{
-			m_pPlayer->AddY(1);
+			m_pPlayer->AddY(10);
 			system("cls");
-			if (m_pPlayer->GetY() == 19 && m_pPlayer->GetX() != 9 && m_pPlayer->GetX() != 29 && m_pPlayer->GetX() != 49)
+			if (m_pPlayer->GetY() >= 30)
 			{
-				m_pPlayer->AddY(-1);
+				m_pPlayer->AddY(-10);
 			}
-			else if (m_pPlayer->GetY() == 9 && m_pPlayer->GetX() != 9 && m_pPlayer->GetX() != 29 && m_pPlayer->GetX() != 49)
-				m_pPlayer->AddY(-1);
-			else if (m_pPlayer->GetY() == 29)
-				m_pPlayer->AddY(-1);
 
 			for (int y = 0; y < 30; y++) {
 
@@ -261,7 +240,6 @@ void Room::printGrid() {
 int Room::GetCell(int x, int y) {
 	return (0);
 }
-
 
 void Room::createMonster()
 {

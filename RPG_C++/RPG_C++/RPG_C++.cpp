@@ -5,13 +5,15 @@ extern game* g_monstreGame;
 
 int main()
 {
-	//string name = player.AskName();
+	ShowWindow(GetConsoleWindow(), SW_SHOWMAXIMIZED);
+	hero player;
+	string name = player.AskName();
+	system("cls");
 	/*game nb;
 	int msg = nb.Salle(); */
 	Room* room = new Room;
 	room->printGrid();
-	hero player;
-	string name = player.AskName();
+	
 	system("pause>nul");
 	game nb;
 	nb.moove();
