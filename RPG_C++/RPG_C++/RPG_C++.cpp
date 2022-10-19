@@ -8,7 +8,7 @@ int main()
 	int msg = nb.Salle(); */
 	Room* room = new Room;
 	room->printGrid();
-	hero player;
+	Player player;
 	string name = player.AskName();
 	system("pause>nul");
 	game nb;

@@ -8,11 +8,9 @@ public:
 
 	void InitApp();
 	void Init();
-	
-	void tabMonstre();
+
 	void initMonstre();
 
-	void tabArmor();
 	void initArmor();
 
 	string GetNextName();

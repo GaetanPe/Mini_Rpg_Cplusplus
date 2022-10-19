@@ -1,9 +1,29 @@
 #include "Framework.h"
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ARMOR :
 
-void game::tabArmor()
+void game::InitApp()
 {
+	nomArmes[0] = "Joyeuse";
+	nomArmes[1] = "Excalibur";
+	nomArmes[2] = "Epee en fer";
+	nomArmes[3] = "katana";
+	nomArmes[4] = "Master Sword";
+	nomArmes[5] = "Nadur";
+	nomArmes[6] = "Keyblade";
+	nomArmes[7] = "Buster Sword";
+	nomArmes[8] = "Frostmourne";
+	nomArmes[9] = "Soul Edge";
+
+	nameMonster[0] = "monstre 1";
+	nameMonster[1] = "monstre 2";
+	nameMonster[2] = "monstre 3";
+	nameMonster[3] = "monstre 4";
+	nameMonster[4] = "monstre 5";
+	nameMonster[5] = "monstre 6";
+	nameMonster[6] = "monstre 7";
+	nameMonster[7] = "monstre 8";
+	nameMonster[8] = "monstre 9";
+	nameMonster[9] = "monstre 10";
+
 	nameArmor[0] = "Armor 1";
 	nameArmor[1] = "Armor 2";
 	nameArmor[2] = "Armor 3";
@@ -15,20 +35,14 @@ void game::tabArmor()
 	nameArmor[8] = "Armor 9";
 	nameArmor[9] = "Armor 10";
 
-	for (int i = 0; i < 10; i++)
-	{
-		cout << nameArmor[i] << endl;
-	}
-
 	typeArmor[0] = "casque";
 	typeArmor[1] = "plastron";
 	typeArmor[2] = "bottes";
 
-	for (int i = 0; i < 3; i++)
-	{
-		cout << typeArmor[i] << endl;
-	}
 }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ARMOR :
 
 void game::initArmor()
 {
@@ -89,24 +103,6 @@ string game::newArmor()
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // MONSTRES : 
-void game::tabMonstre()
-{
-	nameMonster[0] = "monstre 1";
-	nameMonster[1] = "monstre 2";
-	nameMonster[2] = "monstre 3";
-	nameMonster[3] = "monstre 4";
-	nameMonster[4] = "monstre 5";
-	nameMonster[5] = "monstre 6";
-	nameMonster[6] = "monstre 7";
-	nameMonster[7] = "monstre 8";
-	nameMonster[8] = "monstre 9";
-	nameMonster[9] = "monstre 10";
-
-	for (int i = 0; i < 10; i++)
-	{
-		cout << nameMonster[i] << endl;
-	}
-}
 
 
 void game::initMonstre()
@@ -151,24 +147,7 @@ string game::newMonstre()
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ARME :
 
-void game::InitApp()
-{
-	nomArmes[0] = "Joyeuse";
-	nomArmes[1] = "Excalibur";
-	nomArmes[2] = "Epee en fer";
-	nomArmes[3] = "katana";
-	nomArmes[4] = "Master Sword";
-	nomArmes[5] = "Nadur";
-	nomArmes[6] = "Keyblade";
-	nomArmes[7] = "Buster Sword";
-	nomArmes[8] = "Frostmourne";
-	nomArmes[9] = "Soul Edge";
 
-	for (int i=0; i < 10; i++)
-	{
-		cout << nomArmes[i] << endl;
-	}
-}
 
 void game::Init()
 {
