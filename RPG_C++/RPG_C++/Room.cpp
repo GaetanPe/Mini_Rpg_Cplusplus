@@ -16,10 +16,12 @@ Room::~Room()
 }
 
 void Room::printGrid() {
-    Player* m_pPlayer = new Player;
+    Player* m_pPlayer = new Player();
 	m_pPlayer->AddX(29);
 	m_pPlayer->AddY(14);
-	Monstre* m_pMonstre = new Monstre(9, 14);
+	Monstre* m_pMonstre = new Monstre();
+	m_pMonstre->AddX(9);
+	m_pMonstre->AddY(14);
 	Room* pMap = new Room;
 	int mapCounter = 0;
 
@@ -248,7 +250,7 @@ void Room::createMonster()
     if (m_monstre)
         return;
 
-    m_monstre = new Monstre(0, 0);
+    m_monstre = new Monstre();
 
     m_monstre->m_name = GetGame()->newMonstre();
     m_monstre->m_pv = 5 + rand()%5;

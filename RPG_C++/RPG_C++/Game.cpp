@@ -187,7 +187,7 @@ string game::GetNextName()
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // SALLE :
-/*
+
 int game::Salle() {
 	int nombreSalle = 0;
 	int vitesseAtq = 0;
@@ -196,7 +196,7 @@ int game::Salle() {
 	srand(time(NULL));
 
 	nombreSalle = 0;
-	hero* m_pHero = new hero();
+	Player* m_pHero = new Player();
 	Monstre* m_pMonstre = new Monstre();
 	if (nombreSalle == 0)
 	{
@@ -216,64 +216,64 @@ int game::Salle() {
 			char response;
 			cin >> response;
 
-		switch (response)
-		{
-		case 'y':
-		case 'Y':
-			cout << "Let's go fight\n";
-			system("pause>nul");
-		
-			while(m_pMonstre->getM_Pv() != 0 && m_pHero->get_Pv() != 0)
+			switch (response)
 			{
-				vitesseAtq =  rand() %2;
-				if (vitesseAtq == 0)
+			case 'y':
+			case 'Y':
+				cout << "Let's go fight\n";
+				system("pause>nul");
+
+				while (m_pMonstre->get_Pv() != 0 && m_pHero->get_Pv() != 0)
 				{
-					m_pMonstre->Hurt(m_pHero->get_Atk());
-					cout << "Vous lui infligez " << m_pHero->get_Atk() <<" degats. \n";
-					cout << "Il reste " << m_pMonstre->getM_Pv() << " PV a " << m_pMonstre->getM_Name() << "\n";
-					if (m_pMonstre->getM_Pv() == 0)
+					vitesseAtq = rand() % 2;
+					if (vitesseAtq == 0)
 					{
-						cout << "Vous avez win\n";
-						cout << "Veuillez choisir votre prochaine direction";
-						cin >> response;
-						switch (response)
+						m_pMonstre->Hurt(m_pHero->get_Atk());
+						cout << "Vous lui infligez " << m_pHero->get_Atk() << " degats. \n";
+						cout << "Il reste " << m_pMonstre->get_Pv() << " PV a " << m_pMonstre->get_name() << "\n";
+						if (m_pMonstre->get_Pv() == 0)
 						{
-						case 'n':
-						case 'N':
-							nombreSalle = 1;
-							break;
-						case 'e':
-						case 'E':
-							nombreSalle = 2;
-							break;
-						case 'o':
-						case 'O':
-							nombreSalle = 3;
-							break;
-						case 's':
-						case 'S':
-							nombreSalle = 4;
-							break;
+							cout << "Vous avez win\n";
+							cout << "Veuillez choisir votre prochaine direction";
+							cin >> response;
+							switch (response)
+							{
+							case 'n':
+							case 'N':
+								nombreSalle = 1;
+								break;
+							case 'e':
+							case 'E':
+								nombreSalle = 2;
+								break;
+							case 'o':
+							case 'O':
+								nombreSalle = 3;
+								break;
+							case 's':
+							case 'S':
+								nombreSalle = 4;
+								break;
+							}
 						}
 					}
-				}
-				else
-				{
-					cout << "Vous avez louper votre attaque.\n";
-				}
-				system("pause>nul");
-			
-			while(m_pMonstre->getM_Pv() != 0 && m_pHero->get_Pv() != 0){
-			vitesseAtq =  rand() %2;
-			if (vitesseAtq == 0) {
-				m_pMonstre->Hurt(m_pHero->get_Atk());
-				cout << "Vous lui infligez des degats. \n";
-				cout << "Il reste " << m_pMonstre->getM_Pv() << " PV a " << m_pMonstre->getM_Name() << "\n";
-			}
-			else {
-				cout << "Vous avez louper votre attaque.\n";
-			}
-			system("pause>nul");
+					else
+					{
+						cout << "Vous avez louper votre attaque.\n";
+					}
+					system("pause>nul");
+
+					while (m_pMonstre->get_Pv() != 0 && m_pHero->get_Pv() != 0) {
+						vitesseAtq = rand() % 2;
+						if (vitesseAtq == 0) {
+							m_pMonstre->Hurt(m_pHero->get_Atk());
+							cout << "Vous lui infligez des degats. \n";
+							cout << "Il reste " << m_pMonstre->get_Pv() << " PV a " << m_pMonstre->get_name() << "\n";
+						}
+						else {
+							cout << "Vous avez louper votre attaque.\n";
+						}
+						system("pause>nul");
 
 						vitesseMAtq = rand() % 3;
 						if (vitesseMAtq == 0)
@@ -337,11 +337,13 @@ int game::Salle() {
 			}
 
 
-	return vitesseMAtq;
-	return vitesseAtq;
-	return nombreSalle;
+			return vitesseMAtq;
+			return vitesseAtq;
+			return nombreSalle;
+		}
+	}
 }
-*/
+
 void game::moove()
 {
 	Room* pMap = new Room;

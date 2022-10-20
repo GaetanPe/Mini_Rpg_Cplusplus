@@ -4,7 +4,7 @@ extern game* g_pGame;
 int main()
 {
 	ShowWindow(GetConsoleWindow(), SW_SHOWMAXIMIZED);
-	hero player;
+	Player player;
 	string name = player.AskName();
 	system("cls");
 	/*game nb;
@@ -22,7 +22,6 @@ int main()
 	game game;
 	g_pGame = &game;
 
-	GetGame()->tabArmor();
 	GetGame()->initArmor();
 	GetGame()->newArmor();
 

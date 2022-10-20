@@ -1,15 +1,25 @@
 #include "Framework.h"
 #include "Monstre.h"
 
-Monstre::Monstre(int x, int y)
+Monstre::Monstre()
 {
-	m_y = y;
-	m_x = x;
+	m_y = 0;
+	m_x = 0;
 };
 
 Monstre::~Monstre()
 {
 
+}
+
+void Monstre::AddX(int x)
+{
+	m_x += x;
+}
+
+void Monstre::AddY(int y)
+{
+	m_y += y;
 }
 
 

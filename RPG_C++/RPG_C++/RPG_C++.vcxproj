@@ -132,7 +132,6 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Global.cpp" />
-    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Itemp.cpp" />
     <ClCompile Include="Monstre.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -146,7 +145,6 @@
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Global.h" />
-    <ClInclude Include="Hero.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Monstre.h" />
     <ClInclude Include="Player.h" />
